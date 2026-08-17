@@ -26,10 +26,10 @@ items.pop(1)
 print(items)
 
 # 6. index()
-print(items.index(44))
+print(items.index(66))
 
 # 7. count(item) count how many occurance of an item is in the list
-print(items.count(44))
+print(items.count(66))
 
 # 8. sort() in achending and decending
 items.sort()
