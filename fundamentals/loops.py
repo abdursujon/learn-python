@@ -5,6 +5,9 @@ items = [44, 44.5, "Orange", "Apple"]
 for i in range(len(items)):
     print(items[i])
 
+for i in range(1, 10):
+    print(i * 3)
+
 # enhanced for loop
 for i in items: 
     print(i)
