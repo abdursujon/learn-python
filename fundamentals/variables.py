@@ -8,7 +8,6 @@ city = "Manchester"
 
 # Integer (a whole number)
 savings = 100
-
 # Flaot (decimal number)
 height = 5.10 
 
