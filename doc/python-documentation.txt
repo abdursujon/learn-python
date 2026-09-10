@@ -1,0 +1,5 @@
+# Install formatter 
+pip install black 
+
+# Use formatter 
+black file_name 

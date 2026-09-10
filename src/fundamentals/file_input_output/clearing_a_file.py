@@ -1,5 +1,5 @@
 from pathlib import Path 
-path_three = Path('../../data/user.txt')
+path_three = Path('../../../data/text_files/user.txt')
 
 # "r" = read, "a" = append, "w" = write 
 while True:

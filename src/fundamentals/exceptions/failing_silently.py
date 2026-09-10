@@ -11,8 +11,8 @@ def count_words(path):
         print(f"The file: '{path}' has about {len(words)} words!")
 
 # here alice.txt does not exist and we do not report anything we continue to the next files 
-file_names = ["../../data/text_files/pi_digits.txt", "../../data/text_files/pi_million_digits.txt", 
-              "../../data/text_files/alice.txt", "../../data/text_files/pride_and_prejudice.txt", "../../data/text_files/user.txt"] 
+file_names = ["../../../data/text_files/pi_digits.txt", "../../../data/text_files/pi_million_digits.txt", 
+              "../../../data/text_files/alice.txt", "../../../data/text_files/pride_and_prejudice.txt", "../../../data/text_files/user.txt"] 
 for file in file_names:
     path = Path(file)
     count_words(path)

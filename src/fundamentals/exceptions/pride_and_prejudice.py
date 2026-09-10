@@ -5,7 +5,7 @@ We have downloaded the free txt file that consist of entire pride and prejudice
 book which we will utilise to do some interesting things with python.
 '''
 
-path = Path('../../data/text_files/pride_and_prejudice.txt')
+path = Path('../../../data/text_files/pride_and_prejudice.txt')
 try:
     contents = path.read_text(encoding='utf-8')
 except FileNotFoundError:

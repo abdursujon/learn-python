@@ -1,1 +1,12 @@
-*.idea
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.pytest_cache/
+.coverage
+dist/
+build/
+.env
+.DS_Store
+EOF

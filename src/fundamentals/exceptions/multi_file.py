@@ -10,8 +10,8 @@ def count_words(path):
         words = contents.split()
         print(f"The file: '{path}' has about {len(words)} words!")
 
-file_names = ["../../data/text_files/pi_digits.txt", "../../data/text_files/pi_million_digits.txt", 
-              "../../data/text_files/alice.txt", "../../data/pride_and_prejudice.txt", "../../data/text_files/user.txt"] 
+file_names = ["../../../data/text_files/pi_digits.txt", "../../../data/text_files/pi_million_digits.txt", 
+              "../../../data/text_files/alice.txt", "../../../data/pride_and_prejudice.txt", "../../../data/text_files/user.txt"] 
               
 for file in file_names:
     path = Path(file)

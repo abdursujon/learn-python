@@ -18,7 +18,7 @@ def read_cat_and_dog_inf(cat_path, dog_path):
             print(f"{d}")
 
 # Test both methods 
-file_names = ["../../data/text_files/cat.txt", "../../data/text_files/dog.txt"]
+file_names = ["../../../data/text_files/cat.txt", "../../../data/text_files/dog.txt"]
 
 cats = ["Mike", "Miki", "Piano", "Violin"]
 dogs = ["Jasper", "Timi", "Nosi", "Piku"]

@@ -1,12 +1,12 @@
 from pathlib import Path 
 
-path = Path('../../data/programming.txt')
+path = Path('../../../data/text_files/programming.txt')
 contents = ["I love Java\n", "I love Python\n", "I love coding\n", "I love building new things\n", "I love solving problems\n"]
 full_text = "".join([str(item) for item in contents])
 path.write_text(full_text)
 
 # This section of the code writes to a file without overwriting existing data 
-path_two = Path('../../data/user.txt')
+path_two = Path('../../../data/text_files/user.txt')
 while True: 
     print("Enter 'q' to quit anytime.")
     response = input("What is your name?")
