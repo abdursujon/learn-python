@@ -1,6 +1,8 @@
-The aim of this project is to explore python fundamentals and data structures with practical examples. The project is kept simple and beginner friendly which could be utilised as a guide to learn python with no prior experience. 
+# Learn Python
+The aim of this project is to explore python fundamentals and data structures with practical examples. The project is kept simple and beginner friendly which could be utilised as a guide to learn python with no prior experience. It also cover fundamental of how to user Pytest to test your 
+code.
 
-# How to Install Python on  Windows
+### How to Install Python on  Windows
 
 ### Step 1: Download Python
 Go to python.org
@@ -16,31 +18,22 @@ Click Install Now and wait for installation to complete
 Open Command Prompt and run this command: python --version
 You should see something like: Python 3.12.0
 
-# How to Install Python on  Linux 
+### How to Install Python on Linux 
 Run these commands one after another. 
 ``sudo apt update 
 ``sudo apt install python3
 ``python3 --version
 After last command you should see a version of python such as 3.12.0
 
-# Fundamentals Topics Covered
-- variables
-- conditionals
-- loops
-- operators
-- functions
-- built-in functions
-- math functions
-- lambda
-- data types
-- file input/output
-- input/output
-- format
-- modules and imports
-- OOP
-- exceptions
+## Fundamentals Topics Covered
+- **Chapter 01:** Data Types, Operators, Variables
+- **Chapter 02:** Conditionals, Loops
+- **Chapter 03:** Functions, Input/Output
+- **Chapter 04:** Built-in Functions, String Formatting, Lambda Functions, Math Functions
+- **Chapter 05:** Exceptions, File Input/Output, Storing Data
+- **Chapter 06:** Modules and Imports, Object-Oriented Programming (OOP)
 
-# Data Structures Covered 
+## Data Structures Covered 
 - list
 - array 
 - dictionay 
@@ -50,4 +43,6 @@ After last command you should see a version of python such as 3.12.0
 - string 
 - deque 
 
-# Pytest 
+## Testing: Pytest 
+- **Testing a class**
+- **Testing a function**
