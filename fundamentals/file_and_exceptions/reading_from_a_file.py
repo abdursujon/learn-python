@@ -1,7 +1,7 @@
 # pathlib is a module of python which consist of Path class which we can use to read from a file 
 from pathlib import Path 
 
-path = Path('../data/pi_digits.txt')
+path = Path('../../data/pi_digits.txt')
 content = path.read_text().rstrip() # remove extra blank line after output as read_text() creates empty string after finish reading 
 lines = content.splitlines() # a list of all line from read file 
 pi_string = ""
@@ -11,7 +11,7 @@ for line in lines:
 print(pi_string)
 
 
-path_two = Path('../data/pi_million_digits.txt')
+path_two = Path('../../data/pi_million_digits.txt')
 content_two = path_two.read_text().rstrip()
 lines_two = content_two.splitlines()
 pi_string_two = ""
