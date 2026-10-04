@@ -1,89 +1,34 @@
-from array import array 
-import copy 
-'''array types
-'i' = integer
-'f' = float 
-'d' = double 
-'b' = signed type  
-'''
+import numpy as np
 
-# create array("type", [values])
-a = array('d', [98.7, 44.7, 22, 11, 11.0])
-print(a)
+# create an array with data type specified 
+num = np.array([90.3, 33.44, 55, 66.2, 66], dtype='float64')
+num2D = np.array([[90.3, 33.44, 55, 66.2, 66], [90.3, 33.44, 55, 66.2, 66]])
+num3D = np.array(
+    [[[1, 2, 3] ,
+      [3, 5, 6]], 
+     
+     [[7, 8, 9], 
+      [10, 11, 12]]
+    ]
+)
+print(num)
+print(num2D)
+print(num3D)
 
-# array methods in python
-
-# 1. append() - Add element
-a.append(33.4)
-print(a)
-
-# 2. extend() - Add multiple elements
-a.extend([5, 3, 1])
-print(a)
-
+# 1. append() - Add element (returns new array)
+# 2. concatenate() - Add multiple elements (like extend)
 # 3. insert() - Insert at position
-a.insert(0, 99.4)
-print(a)
-
-# 4. remove() - Remove first occurrence
-a.remove(33.4)
-print(a)
-
-# 5. pop() - Remove and return element
-a.remove(99.4)
-print(a)
-
+# 4. remove first occurrence of a value (no remove(), find its index then delete)
+# 5. pop() - Remove and return last element
 # 6. pop(index) - Remove at specified index
-a.pop(1)
-print(a)
-
-# 7. index() - Find position
-print(a.index(22.0))
-
+# 7. index() - Find position (first match)
 # 8. count() - Count occurrences
-print(a.count(11.0))
-
 # 9. reverse() - Reverse array
-a.reverse()
-print(a)
-
-# 10. del array[:] - Remove all elements
-del a[:]
-print(a)
-
-# 11. copy() - Shallow copy
-a = array('i', [1, 34, 22, 14, 55])
-a2 = copy.copy(a)
-print(a2)
-
-a3 = array('i', a) # second way to copy one array to another 
-print(a3)
-
-# 12. buffer_info() - Get info
-print(a.buffer_info())  # (address, length) **
-
-# 13. fromfile() - Read from file
-a1 = array('i', [993, 33, 122, 334, 666])
-print(a1)
-with open('data.bin', 'wb') as f: 
-    a1.tofile(f)
-
-# 14. tofile() - Write to file
-a2 = array('i')
-with open('data.bin', 'rb') as f: 
-    a2.fromfile(f, 5)
-print(a2)
-
+# 10. remove all elements - empty array of same type
+# 11. copy() - Copy (real copy, not a view)
+# 12. info - shape, size, dtype, bytes used
+# 13. tofile() - Write to file
+# 14. fromfile() - Read from file (must give the same dtype)
 # 15. tobytes() - Convert to bytes
-print(a2.tobytes())
-b = a2.tobytes()
-
-# 16. frombytes() - Read from bytes
-a4 = array('i')
-a4.frombytes(b)
-print(a4)
-
+# 16. frombuffer() - Read from bytes (like frombytes)
 # 17. tolist() - Convert to list
-a = array('i', [4, 5, 6, 33])
-array_to_list = a.tolist()
-print(array_to_list)
