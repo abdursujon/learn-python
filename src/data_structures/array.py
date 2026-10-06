@@ -1,7 +1,7 @@
 import numpy as np
 
 # create an array with data type specified 
-num = np.array([90.3, 33.44, 55, 66.2, 66], dtype='float64')
+num = np.array([90.3, 33.44, 55, 22, 22, 22, 66.2, 66], dtype='float64')
 num2D = np.array([[90.3, 33.44, 55, 66.2, 66], [90.3, 33.44, 55, 66.2, 66]])
 num3D = np.array(
     [[[1, 2, 3] ,
@@ -22,7 +22,13 @@ print(num3D)
 # 5. pop() - Remove and return last element
 # 6. pop(index) - Remove at specified index
 # 7. index() - Find position (first match)
-# 8. count() - Count occurrences
+# 8. np.count_nonzero(variable == value_wanted) - Count occurrences
+count = np.count_nonzero(num == 22)
+print(count)
+if count > 3:
+    print("More than 3 occurence of 22 found")
+else: 
+    print("<= 3 occurance of 22 found")
 # 9. reverse() - Reverse array
 # 10. remove all elements - empty array of same type
 # 11. copy() - Copy (real copy, not a view)
