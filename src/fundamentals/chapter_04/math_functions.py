@@ -30,3 +30,53 @@ print("sqrt of 64:", math.sqrt(64))
 list1 = [1, 3, 4, 8]
 list2 = [2, 3, 4, 9]
 print("add product of list1, and list2:", math.sumprod(list1, list2))
+
+
+# ====== Some Practical Examples ====== 
+# 1. Total revenue (price × quantity, summed) using one function.
+prices = [12.99, 4.50, 7.25, 19.99] # price per item
+quantity = [3, 10, 4, 2] # quantity sold 
+# method 1: verbose: 
+sum = 0
+for i in range(len(prices)):
+  curr = prices[i] * quantity[i]
+  sum += curr
+# method 2 with math.sumprod()
+total_revenue = math.sumprod(prices, quantity) 
+print(total_revenue, sum)
+
+# 2. A floor plan that is 30m wide and 40m long. Find the diagonal distance across it.
+floor_diagonal_dist = math.hypot(30, 40)
+print(floor_diagonal_dist)
+
+# 3. A cube-shaped storage box with a volume of 343 m³. Find its side length.
+print(math.cbrt(343))
+
+# 4. Boxes hold 12 items each. Find how many boxes are needed to pack 499 items.
+print("number of box", math.ceil(499/12))
+
+# 5. 15 workers must be paired into teams of 2. Find how many different pairs are possible.
+# traditional mathematical way 
+n = 15
+possible_pair = int(n * (n-1)/2)
+print(possible_pair)
+# by math functino 
+print(math.comb(15,2))
+
+# 6. In how many different orders can 6 delivery trucks leave?
+truck_leave_possible_order = math.factorial(6)
+print(truck_leave_possible_order)
+
+# 7. A circular loading zone has a radius of 7.5m. Find its area, rounded down to a whole number.
+r = math.pow(7.5, 2)
+print(math.floor(math.pi * r))
+
+# 8. A stock adjustment of -342.75 was recorded. Print its absolute value.
+print(math.fabs(-342.75))
+
+# 9. Given parcel weight [0.1, 0.2, 0.3, 0.4, 0.15], measure total weight of these parcels accurately: 
+weight = [0.1, 0.2, 0.3, 0.4, 0.15]
+print(math.fsum(weight))
+
+# 10. Sales grow continuously at a rate of 0.05 per year. Find the growth factor after 10 years (e^x, where x = rate × years).
+print(math.exp(0.05 * 10))
