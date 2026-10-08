@@ -2,8 +2,10 @@
 function is a block of code which only runs when it is called. 
 when called, it may or may not return data. 
 the core idea of function is to avoid repetition. 
+Difference between a function and a method: 
+A function stands on its own we pass data to it. for example len(list1)
+A method is something we call on an object such as list1.sort()
 '''
-
 # function with no parameter 
 def my_function():
     print("I am a function")
