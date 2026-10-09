@@ -1,5 +1,5 @@
 # Learn Python
-The aim of this project is to explore python fundamentals and data structures with practical examples. The project is kept simple and beginner friendly which could be utilised as a guide to learn python with no prior experience. It also cover fundamental of how to user Pytest to test your 
+The aim of this project is to explore python fundamentals and data structures with practical examples. The project is kept simple and beginner friendly which could be utilised as a guide to learn python with no prior experience. It also cover fundamental of how to use Pytest to test your 
 code.
 
 --- 
