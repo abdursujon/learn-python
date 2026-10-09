@@ -25,11 +25,11 @@ You should see something like: Python 3.12.0
 ### How to Install Python on Linux 
 Run these commands one after another. 
 ```bash
-``sudo apt update 
-``sudo apt install python3
-``python3 --version
-After last command you should see a version of python such as 3.12.0
+sudo apt update 
+sudo apt install python3
+python3 --version
 ```
+After last command you should see a version of python such as 3.12.0
 --- 
 
 ## Fundamentals Topics Covered
