@@ -32,6 +32,7 @@ After last command you should see a version of python such as 3.12.0
 - **Chapter 04:** Built-in Functions, String Formatting, Lambda Functions, Math Functions
 - **Chapter 05:** Exceptions, File Input/Output, Storing Data
 - **Chapter 06:** Modules and Imports, Object-Oriented Programming (OOP)
+- **chapter_7_regex:** Regex
 
 ## Data Structures Covered 
 - list
