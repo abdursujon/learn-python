@@ -112,3 +112,42 @@ def find_match(first, second):
 first_sen = "I like pizza and I like Stella"
 second_sen = "I don't like pizza, but I like Stella"
 print(find_match(first_sen, second_sen))
+
+
+# ================= Some problem solved using regex ========================= #
+def find_match_word(first, second):
+  pattern = re.compile(r'\b\w+\b')
+  first_sen = set(pattern.findall(first))
+  second_sen = set(pattern.findall(second))
+  return len(first_sen & second_sen)
+                                 
+print(find_match_word("I love pizza, I like football", "I like pizza, I like cricket"))
+
+from collections import Counter
+def robot_direction(direction):
+  # if s consists of char other than N, E, S, W return 0
+  check_direction_s = re.fullmatch(r"[NESW]+", direction)
+  if not check_direction_s:
+    return 0
+    
+  else:
+    is_lowercase = re.search(r"[a-z]", direction)
+    if is_lowercase or direction=="":
+      return 0
+      
+    #counts = Counter(direction) # return a dict with count each char
+    #max_visited_direction = max(counts.values()) # max key:value 
+    #return max_visited_direction
+
+    count_second_way = {}
+    for char in direction:
+      count_second_way[char] = count_second_way.get(char, 0) + 1
+    max_visited_dir_second = max(count_second_way.values())
+    print(count_second_way)
+    return max_visited_dir_second
+    
+  return 0
+  
+print(robot_direction("NWESCDE"))
+print(robot_direction("NExNEx"))
+print(robot_direction("NWNWNSES"))
