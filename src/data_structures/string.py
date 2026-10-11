@@ -1,83 +1,63 @@
-my_name = " abdur rahim Sujon "
+'''
+1. s.count(sub)
+2. s.endswith(suffix)
+3. s.find(sub)
+4. s.index(sub)
+5. s.isalnum()
+6. s.isalpha()
+7. s.isdigit()
+8. s.islower()
+9. s.isspace()
+10. s.isupper()
+11. sep.join(list)
+12. len(s)
+13. s.lower()
+14. s.replace(old, new)
+15. s.split(sep)
+16. s.startswith(prefix)
+17. s.strip()
+18. s.upper()
+'''
+s = "Here no one is equal. Here everybody wants more. More they have, the more they want."
 
-# 1. upper(): convert to uppercase
-print(my_name.upper())
+# 1. s.count(sub): count occurrences of a substring
+result = s.count("Here")
+print(result)
 
-# 2. lower(): convert to lowercase
-print(my_name.lower())
+# 2. s.endswith(suffix): check if string ends with suffix
+if s.endswith("more."):
+    print(s.count("more"))
 
-# 3. capitalize(): capitalize first char only
-print(my_name.capitalize())
+# 3. s.find(sub): index of first occurrence, -1 if not found
+result = s.find("more")
+print(f"index of first occurrence of more {result}")
 
-# 4. title(): capitalize first char of each word
-print(my_name.title())
+# 4. s.index(sub): same as find() but raises ValueError if not found
 
-# 5. swapcase(): swap upper/lower case
-print(my_name.swapcase())
+# 5. s.isalnum(): True if all chars are letters or digits
 
-# 6. strip(): remove leading/trailing whitespace
-print(my_name.strip())
+# 6. s.isalpha(): True if all chars are letters
 
-# 7. replace(): replace a substring
-print(my_name.replace("Sujon", "Suja"))
+# 7. s.isdigit(): True if all chars are digits
 
-# 8. split(): split into a list by separator
-print(my_name.split(" "))
+# 8. s.islower(): True if all letters are lowercase
 
-# 9. join(): join a list into a string
-my_name_word_list = ["Abdur", "Rahim", "Sujon"]
-print(" ".join(my_name_word_list))
+# 9. s.isspace(): True if all chars are whitespace
 
-# 10. find(): return index of first occurrence (-1 if not found)
-print(my_name.find("Su"))
+# 10. s.isupper(): True if all letters are uppercase
 
-# 11. index(): same as find() but raises error if not found
-print(my_name.index("Su"))
-# error: print(my_name.index("Sujonn"))
+# 11. sep.join(list): join a list into a string using sep
 
-# 12. count(): count occurrences of a substring
-print(my_name.count("Su"))
+# 12. len(s): length of the string
 
-# 13. startswith() / endswith(): check prefix/suffix
-if(my_name.startswith(" abdur") == True):
-    print("correct name")
+# 13. s.lower(): convert to lowercase
 
-if(my_name.endswith("Sujon ") == True):
-    print("correct name")
+# 14. s.replace(old, new): replace a substring
 
-# 14. isalpha() / isdigit() / isalnum(): check string type
-my_name = "Sujon"
-age = "24"
-print(my_name.isalpha())
-print(my_name.isalnum()) # all chars are letters or digits
-print(age.isdigit()) 
+# 15. s.split(sep): split into a list by separator (no arg = split on whitespace)
 
-# 15. isupper() / islower() / isspace(): check case/whitespace
-print("ABDUR".isupper())
-print("abdur".islower())
-print(" ".isspace())
+# 16. s.startswith(prefix): check if string starts with prefix
 
-# 16. center() / ljust() / rjust(): padding
-my_name = "Abdur Rahim Sujon"
-print(my_name.center(200))
-my_name = my_name.center(100)
-print(my_name.ljust(50)) # hi........
-print(my_name.rjust(300)) # ........hi
+# 17. s.strip(): remove leading/trailing whitespace
 
-# 17. zfill(): pad with zeros 
-print("10".zfill(4))
-
-# 18. partition(":") splits at the first : and returns a tuple of 3 parts: (before, separator, after).
-print("name-sujon:age-24:hobby-football".partition(":"))
-
-# 19. expandtabs(): replace tabs with spaces
-print("row1\trow2\trow3")
-print("row1\trow2\trow3".expandtabs(1))
-
-# 20. casefold(): aggressive lowercase (for caseless comparison)
-hobbies = ["Football", "FOOTBALL"]
-print(f"{hobbies[0].casefold()}")
-print(hobbies[0].casefold() == hobbies[1].casefold())
-
-# 21. len(): length of the string   
-print(len(my_name))
+# 18. s.upper(): convert to uppercase
