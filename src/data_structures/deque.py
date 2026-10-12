@@ -1,5 +1,21 @@
 from collections import deque
+
 '''
+1. dq.append(item)
+2. dq.appendleft(item)
+3. dq.extend(iterable)
+4. dq.extendleft(iterable)
+5. dq.pop()
+6. dq.popleft()
+7. dq.remove(item)
+8. dq.index(item)
+9. dq.count(item)
+10. dq.rotate(n)
+11. dq.reverse()
+12. dq.copy()
+13. len(dq)
+14. dq.clear()
+
 deque (pronounced "deck") is a data structure in Python available 
 in the standard collections module.  It stands for double-ended queue
 and is designed for O(1) time complexity when appending and popping

@@ -1,3 +1,17 @@
+'''
+1. lst.append(item)
+2. lst.extend(iterable)
+3. lst.insert(index, item)
+4. lst.remove(item)
+5. lst.pop() / lst.pop(index)
+6. lst.index(item)
+7. lst.count(item)
+8. lst.sort() / lst.sort(reverse=True)
+9. lst.copy()
+10. len(lst)
+11. lst.clear()
+'''
+
 items = []
 items2 = ["Apple", "Orange", "Coffee"]
 items3 = [12, 66.8, "Sugar", 7j]

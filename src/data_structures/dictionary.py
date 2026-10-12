@@ -1,9 +1,20 @@
 '''
+1. d.copy()
+2. dict.fromkeys(keys, value)
+3. d.get(key) / d.get(key, default)
+4. d.items()
+5. d.keys()
+6. d.values()
+7. d.pop(key)
+8. d.popitem()
+9. d.setdefault(key, default)
+10. d.update(other_dict)
+11. d.clear()
+
 Dictionary data structure is used to store data in key:value pairs.
 1. It is ordered.
 2. Item can be change after stored.
-3. It does not allow duplicate key:value pair 
-It has 11 methods which we can use to manipulate the stored data. 
+3. It does not allow duplicate key 
 '''
 
 dictionary_example = {"football": 1863, "cricket": 1598, "basketball": 1891} 

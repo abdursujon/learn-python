@@ -7,10 +7,12 @@ print(len(s))
 # max() - maximum value
 l = [1, 33, 44, 122, 33]
 print(max(l))
+print(max(3, 7))
 
 # min() - minimum value
 l = [1, 33, 44, 122, 33]
 print(min(l))
+print(min(4, 22))
 
 # sum() - total
 l = [1, 33, 44, 122, 33]
@@ -32,28 +34,12 @@ l = [1, 33, 44, 122, 33]
 mul = list(map(lambda x: x * 2, l))
 print(mul)
 
-# filter() - keep matching elements
+# filter(exp, arg) - keep matching elements
 l = [1, 33, 44, 122, 33]
 odd = list(filter(lambda x: x % 2 != 0, l))
 print(odd)
 
-# random built in function 
-
-# 1. random float 0 to 1 
-print(random.random())
-
-# 2. random integer between a and b inclusive 
-print(random.randint(1, 200))
-
-# 3. Pick a random element from a list 
-coutries = ["Bangladesh", "Italy", "England", "India"]
-print(random.choice(countries))
-
-# 4. shuffle list 
-num = [1, 2, 3, 4, 5]
-random.shuffle(num)
-print(num)
-
-# 5. Pick k random elements
-num = [1, 2, 3, 4, 5, 88, 1, 333, 44]
-print(random.sample(num, 5))
+# sorted(arg) 
+nums = [-10, 3, 11, 33]
+nums = sorted(nums)
+print(nums)
