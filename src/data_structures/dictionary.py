@@ -17,68 +17,96 @@ Dictionary data structure is used to store data in key:value pairs.
 3. It does not allow duplicate key 
 '''
 
-dictionary_example = {"football": 1863, "cricket": 1598, "basketball": 1891} 
+items_map = {}
 
-# Adding key:value to a dictionary standard way 
-fruits = ["apple", "banana", "orange", "cherry"]
-d1 = {}
-key = 1
-for f in range(len(fruits)):
-    d1[key] = fruits[f]
-    key += 1
-print(d1)
+# *** adding items in dict ***
+ids = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+items = ["apple", "orange", "buscuit", "chocklate", "cereal", "milk", "egg", "butter", "banana", "sugar"]
+for id, item in zip(ids, items):
+  items_map[id] = item 
+print(items_map)
+# delete a key 
+del items_map[10]
+print(items_map)
+# looping dict 
+count_how_many_id = 0
+add_id = 0
+for item in items_map:
+  count_how_many_id += 1
+  add_id += item
+print(count_how_many_id)
+print(add_id)
+# check if key exist 
+nums = [9, 12, 13, 1, 2]
+for n in nums:
+  if n in items_map:
+    print("True")
+  else:
+    print("False")
+    
+# 1. d.copy()
+items_map_two = items_map.copy()
+items_map_two[11] = "bun"
+items_map_two[12] = "bread"
+print(items_map_two)
 
+# 2. dict.fromkeys(keys, value) we can use this to pass keys with all default value such as empty string, or just zero 
+items_map_three = dict.fromkeys(ids, "")
+print(items_map_three)
+# now we can use that map to add values 
+for id, item in zip(ids, items):
+  items_map_three[id] = item
+print(items_map_three)
 
-# 1. copy() - Shallow copy means it only copy what exits now, it won't register any update that is made into original map 
-d2 = d1.copy()
-d1[5] = "Pinapple"
-print(d1)
-print(d2) # d2 is unchanged
+# 3. d.get(key) / d.get(key, default)
+print(items_map.get(12))
+print(items_map.get(12, 0))
+print(items_map.get(3))
 
+# 4. d.items()
+for key, value in items_map.items():
+  if key == 10:
+    items_map[key] = "coffee"
+  if items_map[key] == "butter":
+    items_map[key] = "potato"
+print(items_map)
 
-# 2. fromkeys() - Create dict from keys
-d3 = dict.fromkeys(["apple", "banana", "orange", "cherry"], 0)
-print(d3)
-# on purpose of this method is that we can use it to count items, we can start with 0 then count elements 
-fruits = ["apple", "banana", "orange", "cherry", "banana", "orange", "cherry"]
-for f in fruits: 
-    if f in d3:
-        d3[f] += 1
-print(d3)
+# 5. d.keys()
+for key in items_map.keys():
+  if key == 5:
+    items_map[key] = "protein bar"
+print(items_map)
+ids.sort(reverse=True)
+items_map = dict(zip(ids, items_map.values()))
+print(items_map)
 
+# 6. d.values()
+for k, v in zip(items_map.keys(), items_map.values()):
+  items_map[k] = v[::-1]
+print(items_map)
+for k, v in zip(items_map.keys(), items_map.values()):
+  items_map[k] = "".join(reversed(v))
+print(items_map)
+  
+# 7. d.pop(key) remove item of a dict by key 
+items_map.pop(10)
+print(items_map)
 
-# 3. get() - Get value (no error if missing)
-for i in d3: 
-    print(d3.get(i))
+# 8. d.popitem() removes last inserted item 
+items_map.popitem()
+print(items_map)
 
-# 4. items() - Return key-value pairs
-print(d3.items())
+# 9. d.setdefault(key, default)
+ids.sort()
+items_map_four = {}
+for i in ids:
+  items_map_four.setdefault(i, "")
+print(items_map_four)
 
-# 5. keys() - Return all keys
-print(d3.keys())
+# 10. d.update(other_dict)
+items_map_four.update(items_map)
+print(items_map_four)
 
-# 6. values() - Return all values
-print(d3.values())
-
-# 7. pop() - Remove and return value of a key (returns error if does not exits)
-print(d3.pop("apple"))
-
-# 8. popitem() - Remove and return last item (if dictionary is empty, popitem will return error)
-print(d3.popitem())
-
-# 9. setdefault() - Get value of a key, set value if missing
-print(d3)
-d3.setdefault("apple", 4) # will add key apple and value 4
-d3.setdefault("orange", 4) # won't change anything because the key "orange" already exists
-print(d3)
-
-# 10. update() - Add/update from another dict
-d4 = {}
-d4.update(d3)
-print(d4) # d4 and d3 has same key:values 
-
-# 11. clear() - Remove all items
-d4.clear()
-d3.clear()
-print(d3)
-print(d4)
+# 11. d.clear()
+items_map.clear()
+print(items_map)
