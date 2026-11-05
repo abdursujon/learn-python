@@ -213,3 +213,10 @@ person = []
 for n, a in zip(names, age):
     person.append(dict(name=n,age=a))
 print(person)
+
+
+# To print all built in methods so we can see and remind ourself 
+import builtins 
+#print(dir(builtins))
+# print method that we can only use 
+print([d for d in dir(builtins) if not d.startswith('__')])
