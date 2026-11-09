@@ -1,4 +1,4 @@
-import random 
+import random
 
 # 1. choice(data)
 nums = [1, 89, 331, 11]

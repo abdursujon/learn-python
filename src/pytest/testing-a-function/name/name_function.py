@@ -3,7 +3,7 @@ def get_formatted_name(first, last):
     return full_name.title()
 
 
-def get_formatted_name_including_middle_name(first, last, middle=''):
+def get_formatted_name_including_middle_name(first, last, middle=""):
     if middle:
         full_name = f"{first} {middle} {last}"
     else:

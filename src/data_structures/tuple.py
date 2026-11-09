@@ -1,12 +1,13 @@
-'''tuple
-built in methods: 
+"""tuple
+built in methods:
 1. index
 2. count
-'''
+"""
+
 print(dir(tuple))
 nums = (1, 2, 3, 3, 4, 2, 2, 45, 3, 1, 2)
 count_2 = nums.count(2)
-print(nums[2]) # allowed 
+print(nums[2])  # allowed
 # nums[2] = 23 editing not allowed in the same tuple
 print(count_2)
 index_2 = nums.index(2)
@@ -57,12 +58,12 @@ t = sorted(t)
 print(t)
 
 # 7. Given a list of tuples [(1, 'b'), (3, 'a'), (2, 'c')], sort it by the second element.
-t = [(1, 'b'), (3, 'a'), (2, 'c')] # list consist of tuples 
+t = [(1, "b"), (3, "a"), (2, "c")]  # list consist of tuples
 t = sorted(t, key=lambda x: x[1])
 print(t)
 
 # 8. Given t1 = (1, 2) and t2 = (3, 4), produce (1, 2, 3, 4) and (1, 2, 1, 2).
-t1 = (1, 2) 
+t1 = (1, 2)
 t2 = (3, 4)
 t = t1 + t2
 print(t)
@@ -72,29 +73,30 @@ print(t)
 # 9. Can a tuple be a dictionary key? Can a list? Show both.
 d = {}
 d[t] = 6
-l = [2, 3, 4] # can not use list as key in dict in python
-l = tuple(l) # convert it to tuple first 
+l = [2, 3, 4]  # can not use list as key in dict in python
+l = tuple(l)  # convert it to tuple first
 d[l] = 9
 print(d.get(t))
 print(d.keys())
-for k in d.keys():
-  if k == t:
-    print(k)
-  if k == l:
-    print(l)
-    
+for k in d:
+    if k == t:
+        print(k)
+    if k == l:
+        print(l)
+
 # 10. Given nums = (1, 2, 3, 2, 4, 2), return a tuple of the values that appear
 # more than once. Each value should appear only once in the result.
 # Expected: (2,)
 nums = (1, 2, 3, 4, 2, 3, 6, 7)
 from collections import Counter
+
 counts = Counter(nums)
 print(counts)
 result = []
 for k in counts.keys():
-  if counts[k] > 1:
-    result.append(k)
-print(result) 
+    if counts[k] > 1:
+        result.append(k)
+print(result)
 result = tuple(result)
 print(result)
 

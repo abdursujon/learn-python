@@ -1,4 +1,4 @@
-'''
+"""
 1. lst.append(item)
 2. lst.extend(iterable)
 3. lst.insert(index, item)
@@ -10,18 +10,18 @@
 9. lst.copy()
 10. len(lst)
 11. lst.clear()
-'''
+"""
 
 nums = []
 # 1. lst.append(item)
 i = 0
 while i <= 10:
-  nums.append(i ** 2)
-  i += 1
+    nums.append(i**2)
+    i += 1
 print(nums)
 
 # 2. lst.extend(otherdata)
-nums2 = [i**3 for i in range(0, 10)] 
+nums2 = [i**3 for i in range(10)]
 print(nums2)
 nums.extend(nums2)
 print(nums)

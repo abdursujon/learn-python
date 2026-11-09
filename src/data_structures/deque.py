@@ -1,6 +1,6 @@
 from collections import deque
 
-'''
+"""
 1. dq.append(item)
 2. dq.appendleft(item)
 3. dq.extend(iterable)
@@ -25,16 +25,16 @@ Implementation: It is implemented as a doubly linked list, allowing efficient
 and deletion at both the front and rear. 
 Versatility: It can be used to implement both stacks (LIFO) and queues (FIFO). 
 Bounded Size: We can specify a maxlen parameter to create a fixed-size deque that automatically discards older items when full.
-'''
+"""
 
 # Initialize deques
 dq = deque()
 dq2 = deque(["Drawing", "Music", "Football", "Cricket"])
 dq3 = deque([1, "Mix type allowed", 55.6, 8j])
 
-# Common Methods 
+# Common Methods
 
-# 1. append: add an element at the right 
+# 1. append: add an element at the right
 dq.append(1999)
 dq.append(1999)
 print(dq)
@@ -59,7 +59,7 @@ print(dq)
 dq.popleft()
 print(dq)
 
-# 7. remove: remove first occurrence of an element 
+# 7. remove: remove first occurrence of an element
 dq.remove(1999)
 print(dq)
 
@@ -70,10 +70,10 @@ print(dq.index(1999))
 print(dq.count(1999))
 
 # 10. rotate: rotate elements (positive = right, negative = left)
-dq.rotate(2) # Takes last 2 elements and moves them to front
+dq.rotate(2)  # Takes last 2 elements and moves them to front
 print(dq, "Moved last two element to the front of the deque")
 dq.rotate(-2)  # Takes first 2 element and moves it to end
-print(dq ,"Moved first two element to the end of the deque")
+print(dq, "Moved first two element to the end of the deque")
 
 # 11. reverse: reverse the deque in-place
 dq.reverse()

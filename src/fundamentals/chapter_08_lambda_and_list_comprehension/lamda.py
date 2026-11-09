@@ -1,13 +1,13 @@
 from functools import reduce
 
-'''
+"""
 Lambda functions are small anonymous functions (no defined name).
 They are used to pass simple logic to another function.
 - Contain only one expression.
 - The result is returned automatically (no return keyword).
 
 Format: name = lambda arguments: expression
-'''
+"""
 
 # ===== Basics =====
 # cost is an int, price_with_vat takes a and returns a with 20% VAT added
@@ -53,7 +53,7 @@ print(sorted(data, key=lambda x: x[1]))  # by second element
 
 # ===== Practice =====
 # 1. Lambda that takes a number and returns its square
-sq = lambda x: x ** 2
+sq = lambda x: x**2
 print(sq(5))  # 25
 
 # 2. Lambda that takes two numbers and returns the larger one

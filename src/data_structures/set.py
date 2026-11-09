@@ -1,4 +1,4 @@
-'''
+"""
 1. s.add(item)
 2. s.remove(item)
 3. s.discard(item)
@@ -11,7 +11,7 @@
 10. s.update(other)
 11. s.copy()
 12. len(s) / item in s
-'''
+"""
 
 set_one = set()
 set_two = set()
@@ -19,21 +19,21 @@ set_two = set()
 # 1. s.add(item)  -> adds one item
 i = 0
 while i <= 10:
-  set_one.add(i**2)
-  set_two.add(i**3)
-  i+=1
+    set_one.add(i**2)
+    set_two.add(i**3)
+    i += 1
 print(set_one)
 print(set_two)
 
 # 2. s.remove(item)  -> removes item, KeyError if missing
 set_one = list(set_one)
 for s in set_one:
-  if s > 50:
-    set_one.remove(s)
-  else:
-    continue
+    if s > 50:
+        set_one.remove(s)
+    else:
+        continue
 set_one = set(set_one)
-print(set_one)    
+print(set_one)
 
 # 3. s.discard(item)  -> removes item, no error if missing
 set_one.discard(88)
@@ -66,7 +66,7 @@ set_four = {0, 1, 64, 4, 36}
 print(set_three.issubset(set_four))
 
 # 9. s.isdisjoint(other)  -> True if no shared items
-set_three = {3, 44,22}
+set_three = {3, 44, 22}
 set_four = {0, 1, 4}
 print(set_three.isdisjoint(set_four))
 

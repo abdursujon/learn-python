@@ -1,5 +1,3 @@
-import random 
-
 # len() - length
 s = "My name is Sujon"
 print(len(s))
@@ -27,9 +25,9 @@ for index, name in enumerate(fruits):
 names = ["Tiger", "Fox", "Snake"]
 countries = ["Bangladesh", "England", "India"]
 for name, country in zip(names, countries):
-    print(name, country) 
+    print(name, country)
 
-# map() - apply a lambda expression to all given element 
+# map() - apply a lambda expression to all given element
 l = [1, 33, 44, 122, 33]
 mul = list(map(lambda x: x * 2, l))
 print(mul)
@@ -39,7 +37,7 @@ l = [1, 33, 44, 122, 33]
 odd = list(filter(lambda x: x % 2 != 0, l))
 print(odd)
 
-# sorted(arg) 
+# sorted(arg)
 nums = [-10, 3, 11, 33]
 nums = sorted(nums)
 print(nums)

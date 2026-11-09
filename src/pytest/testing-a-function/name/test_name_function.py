@@ -1,5 +1,4 @@
-from name_function import get_formatted_name
-from name_function import get_formatted_name_including_middle_name
+from name_function import get_formatted_name, get_formatted_name_including_middle_name
 
 
 def test_first_and_last_name():

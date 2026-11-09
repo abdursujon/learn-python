@@ -1,8 +1,12 @@
 from survey import AnonymousSurvey
 
-class LanguageSurvey: 
-    questions = ["What is your first language?", "Do you speak any other language (Y/N)?", 
-    "If you were to learn a new langauge which one would you learn first, and why?"]
+
+class LanguageSurvey:
+    questions = [
+        "What is your first language?",
+        "Do you speak any other language (Y/N)?",
+        "If you were to learn a new langauge which one would you learn first, and why?",
+    ]
 
     def language_survey(self):
         response_list = []
@@ -10,9 +14,9 @@ class LanguageSurvey:
 
         for q in self.questions:
             print(q)
-            while True: 
+            while True:
                 response = input("Response: ")
-                if response == 'q':
+                if response == "q":
                     return
                 else:
                     response_list.append(response)
@@ -21,6 +25,7 @@ class LanguageSurvey:
         survey = AnonymousSurvey()
         survey.responses = response_list
         survey.show_result()
+
 
 lang_survey = LanguageSurvey()
 lang_survey.language_survey()

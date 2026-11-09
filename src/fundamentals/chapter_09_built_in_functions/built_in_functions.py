@@ -4,9 +4,9 @@ print(abs(x))
 
 # 2. all() Returns True if all items in an iterable object are true
 l = [0, 0, 1, 1]
-s = {1, 1, 1, 1}
+s = {1}
 t = (True, True, False)
-d = {0:"False", 1:"True"}
+d = {0: "False", 1: "True"}
 print(all(l), all(s), all(t), all(d))
 
 # 3. any() Returns True if any item in an iterable object is true

@@ -1,4 +1,4 @@
-'''
+"""
 1. s.count(sub)
 2. s.endswith(suffix)
 3. s.find(sub)
@@ -17,7 +17,8 @@
 16. s.startswith(prefix)
 17. s.strip()
 18. s.upper()
-'''
+"""
+
 s = "Here no one is equal. Here everybody wants more. More they have, the more they want."
 
 # 1. s.count(sub): count occurrences of a substring
