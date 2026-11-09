@@ -6,6 +6,7 @@ ruff check messy.py --fix
 ruff format messy.py
 """
 
+
 def get_user(name, age):
     data = {"name": name, "age": age}
     unused = 42
