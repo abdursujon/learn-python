@@ -21,7 +21,7 @@ def greet(name):
     return f"Hello {name}, Welcome to Learn Python Project."
 
 
-print(greet("Sujon"))
+greet("Sujon")
 result = greet("Ryan")
 print(result)
 
